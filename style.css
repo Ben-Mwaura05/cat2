@@ -289,3 +289,84 @@ button:hover{
     background-color:whitesmoke;
     color: black;
 }
+.about-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-section h2, 
+.about-section h3 {
+    text-shadow: 0 4px 8px black(0,0,0,0.1);
+  color: #27333f;
+}
+
+.about-section p, 
+.about-section ul {
+  color: #867575;
+  line-height: 1.6;
+}
+.contact {
+  background: #f8f8f8;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #004c99;
+}
+.help-section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      color: #007BFF;
+    }
+    h3 {
+      color: #333;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
