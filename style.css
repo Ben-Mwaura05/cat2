@@ -196,5 +196,96 @@ button:hover{
     font-size: 20px;
     margin-top: 10px;
     text-align: center;
+}
+.image-slide{
+    position: relative;
+    margin: 20px auto;
+    max-width:900px;
+}
+.image-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.images{
+    display: flex;
+    transition: transform 1.3s ease; 
+}
+.images img{
+    width: 100%;
+    max-width: 800px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 15px;
+    padding: 5px;
+    height: 300px;
+}
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: grey;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+.prev:hover, .next:hover{
+    background-color: black;
+    color: white;
 
+}
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+.description{
+    padding: 10px;
+}
+.description li {
+    list-style-position:inside ;
+    margin-top: 10px;
+    line-height: 0.8;
+    text-align: center;
+}
+
+.description h2{
+    text-align: center;
+}
+.grand{
+    color: black;
+    text-shadow: red 0 1px 3px;
+}
+.inquiry h3{
+    color: black;
+    text-shadow: red 0 1px 3px;
+    padding: 10px;
+}
+.inquiry-form input, .inquiry-form textarea{
+    width: 80%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    outline: none;
+}
+.inquiry-form button{
+    background-color: black;
+    color:wheat;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+.inquiry-form button:hover{
+    background-color:whitesmoke;
+    color: black;
 }
