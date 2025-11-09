@@ -442,6 +442,8 @@ input{
     }
     /*--footer--*/
     .footer{
+    bottom: 0;
+    width: 100%;  
     background-color: #222;
     color:white;
     padding: 10px;
@@ -454,6 +456,8 @@ input{
     color:white;
     padding: 10px;
     font-size: 20px;
-    margin-top:580px;
     text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
     }
