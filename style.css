@@ -7,6 +7,7 @@ body{
     background-color: rgb(224, 214, 195);
     font-family: "Poppins", sans-serif;
     text-align: center;
+    
 }
 .navbar{
     display: flex;justify-content: space-between;
@@ -53,13 +54,13 @@ body{
 
 /*--login & reg cont--*/
 .container{
-    background-color: white;
-    padding: 3px;
-    border-radius: 15px;
-    box-shadow: 0 10px rgba(red, green, blue, alpha);
-    width: 300px;
-    text-align: center;
-    margin: auto;
+  background-color: whitesmoke;
+  margin-top: 80px;
+  width: 300px;
+  display:inline-block;
+  justify-items: center;
+  padding: 20px;
+  border-radius: 15px;
 }
 input{
     width: 80%;
@@ -80,6 +81,13 @@ input{
 .button:hover{
     background-color:grey;
     color: wheat;
+}
+.picture{
+  background-image: url(images/img5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
 }
 /*--search--*/
 .search-container{
@@ -240,7 +248,6 @@ input{
 .prev:hover, .next:hover{
     background-color: black;
     color: white;
-
 }
 .prev{
     left: 10px;
@@ -272,7 +279,7 @@ input{
     padding: 10px;
 }
 .inquiry-form input, .inquiry-form textarea{
-    width: 80%;
+    width: 50%;
     padding: 8px;
     margin: 5px 0;
     border: 1px solid grey,(21, 21);
@@ -311,9 +318,12 @@ input{
       max-width: 600px;
       margin: auto;
 } 
+.about h2{
+  text-shadow: 0 4px 8px blue(0,0,0,0.1);
+}
 .about-section h3 {
-    text-shadow: 0 4px 8px black(0,0,0,0.1);
-    color:black;
+    text-shadow: 0 4px 8px red(0,0,0,0.1);
+    color:rgb(114, 37, 37);
 }
 .about-section p, 
 .about-section ul {
@@ -329,13 +339,18 @@ input{
   align-self: center;
   background-color: black;
   color: white;
+  transition: background-color 0.3s ease;
+}
+.reach:hover{
+   background-color:whitesmoke;
+    color: black;
 }
 /*--contacts--*/
 .cont-info{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px 10px;
+    gap: 10px;
+    padding: 15px 5px;
     text-align: center;
 }
 .box i{
@@ -343,63 +358,46 @@ input{
     font-size: 30px;
     color: black;
     margin-bottom: 10px;
-    text-shadow: black 0 4px 12px;
+    text-shadow: rgb(14, 44, 179) 0 4px 12px;
 }
 .contact {
+  background-color: rgb(189, 183, 183);
   padding: 20px;
   text-align: center;
-  background-color: rgb(192, 185, 185);
 }
 .contact h2 {
   color: #333;
   margin-bottom: 20px;
 }
-.contact-form{
-    display: flex;
-    justify-content: center;   /* center the form horizontally */
-    align-items: center;       /* optional: center vertically if you want */
-    min-height: 100vh;
-    
-}
-.contact-form form{
-    width: 100%;
-    max-width: 400px;          /* fixed max width for inputs */
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.contact-form input{
-    width: 100%;
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid black;
-  outline: none;
-  justify-items: center;
-}
-.contact-form textarea {
-  width: 100%;
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid black;
-  outline: none;
-}
-.contact-form button {
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.contact-form button:hover {
-  background-color: #004c99;
+.send h3{
+    color: black;
+    text-shadow: rgb(95, 65, 65) 0 1px 3px;
+    padding: 10px;
+}
+.send-form input, .send-form textarea{
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid grey,(21, 21);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    outline: none;
+}
+.send-form button{
+    background-color: black;
+    color:wheat;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+.send-form button:hover{
+    background-color:whitesmoke;
+    color: black;
 }
 /*--help part--*/
 .help{
@@ -443,11 +441,19 @@ input{
         font-family: "Playfair Display", serif;
     }
     /*--footer--*/
-    footer{
+    .footer{
     background-color: #222;
     color:white;
     padding: 10px;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top:10px;
+    text-align: center;
+    }
+    .footer1{
+    background-color: #222;
+    color:white;
+    padding: 10px;
+    font-size: 20px;
+    margin-top:580px;
     text-align: center;
     }
