@@ -15,8 +15,13 @@ body{
     padding: 10px;
     border-radius: 5px;
     z-index: 10;
-
 }
+.heading{
+    background-color: rgb(197, 190, 190);
+    padding: 5px;
+    border-radius: 8px;
+}
+/*--logo--*/
 .logo-img{
     width: 40px;
     height: 40px;
@@ -27,23 +32,26 @@ body{
     font-size: bolder;
     color:red;
 }
+.logo-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*--links--*/
 .nav-links {
     gap: 20px;
     display: flex;
 }
 .nav-links a{
     text-decoration: none;
-    color:red;
+    color:rgb(75, 45, 45);
     transition: color 0.3s;
 }
 .nav-links a:hover{
-    color:aqua;
+    color:rgb(16, 61, 211);
 }
-.heading{
-    text-align: center;
-    background-color: rgb(192, 184, 184);
-    padding: 10px;
-}
+
+/*--login & reg cont--*/
 .container{
     background-color: white;
     padding: 3px;
@@ -61,32 +69,19 @@ input{
     border: 2px solid #7e5d5d;
 }
 .button{
-    background-color: rgb(126, 15, 15);
-    color: turquoise;
+    background-color: black;
+    color: white;
     border: none;
     padding: 15px;
     width: 50%;
     cursor: pointer;
     border-radius: 10px;
 }
-button:hover{
-    background-color: #7e5d5d;
+.button:hover{
+    background-color:grey;
+    color: wheat;
 }
-.book-now{
-    border-radius: 5px;
-    padding: 4px;
-    background-color: wheat;
-    cursor: pointer;
-    transition: color 0.4s;
-}
-.book-now:hover{
-    color: antiquewhite;
-}
-.logo-img img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
+/*--search--*/
 .search-container{
     display: flex;
     justify-content: center;
@@ -106,7 +101,7 @@ button:hover{
 }
 .search-icon{
     font-size: 15px;
-    margin-right: 8px;
+    margin-left: 10px;
     color: black;
 }
 .search-box input{
@@ -121,81 +116,91 @@ button:hover{
     background-color: transparent;
     font-size: 14px;
     color:#333;
-    margin-left:10px;
+    margin-right:10px;
     cursor:pointer;
     outline: none;
 }
-.rentals{
-    text-align: center;
-    padding: 5px;
+
+/* --- RENTALS SECTION --- */
+.rentals {
+  text-align: center;
+  padding: 5px;
 }
-.rentals h2{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+.rentals h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-.rentals-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 15px;
-    justify-items: center;
+
+.rentals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 15px;
+  align-items: stretch; 
+  justify-items: stretch; 
+  width: 100%;
 }
+
 @media screen and (max-width: 600px) {
-    .rentals-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-}
-.rentals-card{
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 1rem;
-    width: 100%;
-    max-width: 300px;
-    transition: transform 0.3s ease,box-shadow 0.3s ease;
-}
-.rentals-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-.rentals-card img{
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    }
-    .rentals-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-    .rentals-card p {
-        font-size: 1rem;
-        color: #666;
-        margin-bottom: 1rem;
-    }  
-    
-    .info{
-        background-color: orange;
-        color: #010000;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-.info:hover{
-    background-color: #000000;
-    color: #fefefe;
+  .rentals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
 }
 
-.footer{
-    background-color: #222;
-    color:white;
-    padding: 10px;
-    font-size: 20px;
-    margin-top: 10px;
-    text-align: center;
+.rentals-card {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%; 
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rentals-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.rentals-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: block;
+  object-fit: cover;
+}
+
+.rentals-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.rentals-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.info {
+  background-color: orange;
+  color: #010000;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.info:hover {
+  background-color: #000000;
+  color: #fefefe;
 }
 .image-slide{
     position: relative;
@@ -258,18 +263,19 @@ button:hover{
 }
 .grand{
     color: black;
-    text-shadow: red 0 1px 3px;
+    text-shadow: rgb(158, 115, 115) 0 1px 3px;
 }
+/*--inquiry part--*/
 .inquiry h3{
     color: black;
-    text-shadow: red 0 1px 3px;
+    text-shadow: rgb(95, 65, 65) 0 1px 3px;
     padding: 10px;
 }
 .inquiry-form input, .inquiry-form textarea{
     width: 80%;
     padding: 8px;
     margin: 5px 0;
-    border: 1px solid red;
+    border: 1px solid grey,(21, 21);
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
@@ -289,50 +295,100 @@ button:hover{
     background-color:whitesmoke;
     color: black;
 }
+/*--about section--*/
 .about-section {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-.about-section h2, 
+.about {
+    background-color: rgb(194, 185, 185);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+} 
 .about-section h3 {
     text-shadow: 0 4px 8px black(0,0,0,0.1);
-  color: #27333f;
+    color:black;
 }
-
 .about-section p, 
 .about-section ul {
-  color: #867575;
+  color: rgb(37, 36, 36);
   line-height: 1.6;
 }
-.contact {
-  background: #f8f8f8;
-  padding: 40px;
-  text-align: center;
+.reach{
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  background-color: black;
+  color: white;
 }
-
+/*--contacts--*/
+.cont-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.box i{
+    display:block;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    text-shadow: black 0 4px 12px;
+}
+.contact {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(192, 185, 185);
+}
 .contact h2 {
   color: #333;
   margin-bottom: 20px;
 }
-
-.contact-info p {
-  margin: 5px 0;
+.contact-form{
+    display: flex;
+    justify-content: center;   /* center the form horizontally */
+    align-items: center;       /* optional: center vertically if you want */
+    min-height: 100vh;
+    
 }
-
-.contact-form input,
-.contact-form textarea {
-  width: 80%;
+.contact-form form{
+    width: 100%;
+    max-width: 400px;          /* fixed max width for inputs */
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input{
+    width: 100%;
+  max-width: 300px;
   padding: 10px;
-  margin: 10px 0;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
+  outline: none;
+  justify-items: center;
 }
-
+.contact-form textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
 .contact-form button {
   background-color: #0066cc;
   color: white;
@@ -345,21 +401,33 @@ button:hover{
 .contact-form button:hover {
   background-color: #004c99;
 }
+/*--help part--*/
+.help{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.faq{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px grey;
+}
 .help-section {
-      background-color: #ffffff;
+      background-color: rgb(194, 185, 185);
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       max-width: 600px;
       margin: auto;
     }
-    h2 {
-      color: #007BFF;
-    }
     h3 {
       color: #333;
+      padding: 8px;
+      margin-bottom:5px ;
     }
-    ul {
+    p{
       list-style-type: square;
       margin-left: 20px;
     }
@@ -369,4 +437,17 @@ button:hover{
     }
     a:hover {
       text-decoration: underline;
+    }
+    #greeting{
+        color: rgb(58, 56, 56);
+        font-family: "Playfair Display", serif;
+    }
+    /*--footer--*/
+    footer{
+    background-color: #222;
+    color:white;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
     }
