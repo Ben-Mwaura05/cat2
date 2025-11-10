@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Display greeting on index.html
+    // Display greeting on home.html
     const greeting=document.getElementById("greeting");
     const currentUser=JSON.parse(localStorage.getItem("currentUser"));
     if(currentUser && greeting){
@@ -109,3 +109,11 @@ setInterval(() => {
   nextBtn.click();
 }, 5000);
 }
+const logout=document.getElementById("logout");
+ if(logout){
+  logout.addEventListener("click",function(e){
+    e.preventDefault();
+    localStorage.removeItem("currentUser");
+    window.location.href="index.html";
+  });
+ };
