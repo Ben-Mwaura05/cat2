@@ -117,3 +117,10 @@ const logout=document.getElementById("logout");
     window.location.href="index.html";
   });
  };
+ const greeting=document.getElementById("greeting");
+ const currentUser=JSON.parse(localStorage.getItem("currentUser"));
+ if(currentUser && greeting){
+  greeting.textContent=`Hello, ${currentUser.fullname}`;
+  greeting.classList.add("typing");
+ }
+  

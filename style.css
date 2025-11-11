@@ -22,12 +22,80 @@ body{
     padding: 5px;
     border-radius: 8px;
 }
+/*--type and erasing--*/
+@keyframes typingErase{
+  0%, 15% {
+    width: 0ch;
+  }
+  40%, 50%{
+    width: 8ch;
+  }
+  100%{
+    width: 0ch;
+  }
+}
+.anime-h1{
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: none;
+  animation: typing 3s steps(30, end) forwards ;
+}
+
+@keyframes typing {
+  0% { width: 0ch; }
+  100%{ width: 100%; }
+}
+.anime-p{
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: none;
+  animation: typingP 4s steps(55, end) forwards;
+}
+@keyframes typingP {
+  0% {width: 0ch;}
+  100% { width: 55ch;}
+}
+.anime-h2{
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: none;
+  animation: typing 3s steps(30, end) forwards;
+}
+@keyframes typing {
+  0% { width: 0ch; }
+  100%{ width: 100%; }
+}
+.type {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  color: black;
+  border-right: none;
+}
+@keyframes typingH2 {
+  0% { width: 0ch;}
+  100% { width: 100%;}
+} 
+@keyframes typingH1 {
+  0% { width: 0ch;}
+  100% { width: 100;}
+}
+  #greeting{
+  width: 0ch;
+  animation: typingH2 2.5s steps(20, end) forwards;
+}
+#welcome-h1{
+  width: 0ch;
+  animation: typeh1 2.0s steps(25, end) forwards;
+  animation-delay:1.5s, 0s ;
+}
 /*--logo--*/
 .logo-img{
     width: 40px;
     height: 40px;
     background-color:aliceblue;
-    border-radius: 50%
+    border-radius: 50%;
 }
 .logo{
     font-size: bolder;
